@@ -1,0 +1,24 @@
+__pycache__/
+.venv/
+venv/
+venv_library_root/
+.env
+
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.pnp
+.pnp.js
+/build
+/dist
+/.next
+/.cache
+
+/postgres_data
+
+# Статические файлы после сборки
+/staticfiles/
+/mediafiles/
+

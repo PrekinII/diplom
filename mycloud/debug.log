@@ -1,0 +1,225 @@
+INFO 2025-04-19 14:38:45,456 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 14:39:03,413 basehttp "GET /admin/ HTTP/1.1" 200 8771
+INFO 2025-04-19 14:39:19,446 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 14:39:19,495 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 14:39:20,348 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 14:39:20,373 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 14:39:22,786 basehttp "GET /admin/ HTTP/1.1" 200 8771
+INFO 2025-04-19 14:44:13,918 autoreload C:\Users\rs1-t\OneDrive\Рабочий стол\Netology\diplom_1\mycloud\storage\views.py changed, reloading.
+INFO 2025-04-19 14:44:15,767 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 15:02:58,384 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:02:58,394 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:02:58,559 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:02:58,627 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:00,961 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:01,269 basehttp "POST /api/users/logout/ HTTP/1.1" 200 29
+WARNING 2025-04-19 15:03:08,166 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:03:08,171 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:03:08,174 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:08,175 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:03:08,175 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:03:08,178 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:03:13,232 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:03:13,238 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:03:13,243 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:03:13,243 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:03:13,250 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:03:13,250 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:03:30,788 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:31,363 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 15:03:31,403 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:31,407 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:31,530 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:31,540 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:34,505 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:34,505 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:34,639 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:34,639 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:34,862 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:03:34,864 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:03:42,299 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:42,345 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:03:42,440 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:42,464 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:03:42,492 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:03:42,504 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:03:56,996 views admin загрузил файл: Сертификат Нетология вводный курс Python.jpg
+INFO 2025-04-19 15:03:57,000 basehttp "POST /api/storage/upload/ HTTP/1.1" 201 248
+INFO 2025-04-19 15:03:57,089 basehttp "GET /api/storage/ HTTP/1.1" 200 250
+INFO 2025-04-19 15:04:00,592 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:00,639 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:00,728 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:00,764 basehttp "GET /api/storage/ HTTP/1.1" 200 250
+INFO 2025-04-19 15:04:00,768 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:00,796 basehttp "GET /api/storage/ HTTP/1.1" 200 250
+INFO 2025-04-19 15:04:03,801 basehttp "POST /api/users/logout/ HTTP/1.1" 200 29
+INFO 2025-04-19 15:04:11,642 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:12,274 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 15:04:12,322 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:12,322 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:12,438 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:12,445 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:14,962 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:14,989 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:15,076 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:15,090 basehttp "GET /api/storage/ HTTP/1.1" 200 250
+INFO 2025-04-19 15:04:15,097 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:15,125 basehttp "GET /api/storage/ HTTP/1.1" 200 250
+WARNING 2025-04-19 15:04:22,104 views Файл удалён: Сертификат Нетология вводный курс Python.jpg
+INFO 2025-04-19 15:04:22,108 basehttp "DELETE /api/storage/7/delete/ HTTP/1.1" 204 0
+INFO 2025-04-19 15:04:22,190 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:04:38,286 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:38,310 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:04:38,414 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:38,436 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:04:38,446 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:04:38,465 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:04:41,662 basehttp "POST /api/users/logout/ HTTP/1.1" 200 29
+INFO 2025-04-19 15:04:45,178 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:04:45,693 log Bad Request: /api/users/login/
+WARNING 2025-04-19 15:04:45,695 basehttp "POST /api/users/login/ HTTP/1.1" 400 41
+INFO 2025-04-19 15:04:53,167 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:04:53,175 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:04:53,177 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:04:53,185 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:04:53,186 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:04:53,191 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:05:49,768 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:05:50,069 log Bad Request: /api/users/register/
+WARNING 2025-04-19 15:05:50,070 basehttp "POST /api/users/register/ HTTP/1.1" 400 97
+INFO 2025-04-19 15:07:02,712 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:07:02,717 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:07:02,728 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:07:02,730 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:07:02,731 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:07:02,731 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:07:05,809 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:07:05,816 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:07:05,822 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:07:05,823 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:07:05,824 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:07:05,829 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:10:42,466 basehttp "GET / HTTP/1.1" 200 185
+WARNING 2025-04-19 15:10:49,552 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:10:49,554 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:10:49,557 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:10:49,559 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:10:49,564 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+INFO 2025-04-19 15:10:49,582 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:21:12,094 log Not Found: /main.db941f41a7177fae032d.hot-update.json
+WARNING 2025-04-19 15:21:12,096 log Not Found: /main.db941f41a7177fae032d.hot-update.json
+WARNING 2025-04-19 15:21:12,097 basehttp "GET /main.db941f41a7177fae032d.hot-update.json HTTP/1.1" 404 2771
+WARNING 2025-04-19 15:21:12,098 basehttp "GET /main.db941f41a7177fae032d.hot-update.json HTTP/1.1" 404 2771
+INFO 2025-04-19 15:21:12,392 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:21:12,394 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:21:12,404 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:21:12,414 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:21:12,414 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:21:12,414 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:21:28,610 log Forbidden: /api/users/me/
+INFO 2025-04-19 15:21:28,614 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:21:28,614 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:21:28,623 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:21:28,629 log Forbidden: /api/users/me/
+WARNING 2025-04-19 15:21:28,632 basehttp "GET /api/users/me/ HTTP/1.1" 403 82
+WARNING 2025-04-19 15:32:50,415 log Not Found: /main.b5447e8c29ce725fde6c.hot-update.json
+WARNING 2025-04-19 15:32:50,417 basehttp "GET /main.b5447e8c29ce725fde6c.hot-update.json HTTP/1.1" 404 2771
+WARNING 2025-04-19 15:32:50,501 log Not Found: /main.b5447e8c29ce725fde6c.hot-update.json
+WARNING 2025-04-19 15:32:50,510 basehttp "GET /main.b5447e8c29ce725fde6c.hot-update.json HTTP/1.1" 404 2771
+WARNING 2025-04-19 15:36:00,439 log Not Found: /main.10d30d4445935cd220c6.hot-update.json
+WARNING 2025-04-19 15:36:00,441 basehttp "GET /main.10d30d4445935cd220c6.hot-update.json HTTP/1.1" 404 2771
+INFO 2025-04-19 15:36:18,588 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:36:19,231 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 15:36:37,165 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:36:37,247 log Forbidden: /api/users/login/
+WARNING 2025-04-19 15:36:37,247 basehttp "POST /api/users/login/ HTTP/1.1" 403 45
+INFO 2025-04-19 15:37:03,526 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+WARNING 2025-04-19 15:37:03,626 log Forbidden: /api/users/login/
+WARNING 2025-04-19 15:37:03,627 basehttp "POST /api/users/login/ HTTP/1.1" 403 45
+INFO 2025-04-19 15:47:41,027 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:47:41,583 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 15:47:41,922 basehttp "OPTIONS /api/csrf/ HTTP/1.1" 200 0
+INFO 2025-04-19 15:47:41,922 basehttp "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-04-19 15:47:41,923 basehttp "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-04-19 15:47:41,923 basehttp "OPTIONS /api/csrf/ HTTP/1.1" 200 0
+INFO 2025-04-19 15:47:42,231 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:47:42,261 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:47:42,344 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:47:42,441 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:47:50,608 basehttp "GET /api/users/all/ HTTP/1.1" 200 368
+INFO 2025-04-19 15:47:50,712 basehttp "GET /api/users/all/ HTTP/1.1" 200 368
+INFO 2025-04-19 15:48:01,675 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:01,683 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:01,778 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:48:01,891 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:48:03,296 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:03,340 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:03,414 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:48:03,420 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:48:03,545 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:48:03,553 basehttp "GET /api/storage/ HTTP/1.1" 200 2
+INFO 2025-04-19 15:48:16,784 views admin загрузил файл: Марион Марч-3.pdf
+INFO 2025-04-19 15:48:16,786 basehttp "POST /api/storage/upload/ HTTP/1.1" 201 201
+INFO 2025-04-19 15:48:16,898 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 15:48:26,401 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:26,408 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:48:26,502 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:48:26,591 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:50:45,549 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:50:46,103 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 15:50:46,145 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:50:46,156 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 15:50:46,261 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:50:46,351 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 15:50:49,405 basehttp "GET /admin/ HTTP/1.1" 200 8771
+INFO 2025-04-19 15:50:50,595 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-04-19 15:50:50,602 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-04-19 15:50:50,607 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-04-19 15:50:50,644 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-04-19 15:50:50,739 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-04-19 15:50:50,743 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-04-19 15:50:50,760 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-04-19 15:50:50,830 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-04-19 15:50:50,833 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-04-19 15:50:50,861 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+WARNING 2025-04-19 15:50:51,103 log Not Found: /favicon.ico
+WARNING 2025-04-19 15:50:51,105 basehttp "GET /favicon.ico HTTP/1.1" 404 2681
+INFO 2025-04-19 18:27:40,962 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 18:29:20,774 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:29:21,550 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 18:29:21,590 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:29:21,596 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:29:21,837 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:29:21,849 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:29:24,998 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:29:25,006 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:29:25,167 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:29:25,167 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:29:25,244 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:29:25,244 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:31:33,018 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:31:33,544 basehttp "POST /api/users/login/ HTTP/1.1" 200 96
+INFO 2025-04-19 18:31:33,580 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:31:33,592 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:31:33,700 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:31:33,704 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:31:35,321 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:31:35,361 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:31:35,466 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:31:35,480 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:31:35,488 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:31:35,515 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:32:31,679 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:32:31,739 basehttp "GET /api/csrf/ HTTP/1.1" 200 49
+INFO 2025-04-19 18:32:31,836 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+INFO 2025-04-19 18:32:31,972 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:32:32,008 basehttp "GET /api/storage/ HTTP/1.1" 200 203
+INFO 2025-04-19 18:32:32,056 basehttp "GET /api/users/me/ HTTP/1.1" 200 87
+WARNING 2025-04-19 18:40:25,968 log Not Found: /storage/
+INFO 2025-04-19 18:40:25,991 basehttp - Broken pipe from ('127.0.0.1', 63148)
+DEBUG 2025-04-19 19:20:56,794 views Файл обновлен: Марион Марч-3.pdf
+INFO 2025-04-19 19:20:56,814 basehttp "PATCH /api/storage/8/edit/ HTTP/1.1" 200 203
+INFO 2025-04-19 19:20:56,906 basehttp "GET /api/storage/ HTTP/1.1" 200 205
+DEBUG 2025-04-19 19:21:03,234 views Файл обновлен: Марион Мар11ч-3.pdf
+INFO 2025-04-19 19:21:03,237 basehttp "PATCH /api/storage/8/edit/ HTTP/1.1" 200 206
+INFO 2025-04-19 19:21:03,331 basehttp "GET /api/storage/ HTTP/1.1" 200 208

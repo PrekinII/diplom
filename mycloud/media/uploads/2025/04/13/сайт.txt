@@ -1,0 +1,20 @@
+background-image: url(https://podarkina96.ru/published/publicdata/WEBASYST/attachments/SC/images/outwear7r.png);
+
+<div class="background">
+<img src="https://podarkina96.ru/published/publicdata/WEBASYST/attachments/SC/images/outwear7r.png">
+</div>
+
+url(../../images/tbw_bullet.gif) left 3px no-repeat
+background:url(../../images/tbw_cat_li.gif) left 0.5em no-repeat;
+
+
+<a href="https://podarkina96.ru/category/muzhskaja-i-zhenskaja-odezhda-family-look/"><img src="https://podarkina96.ru/published/publicdata/WEBASYST/attachments/SC/images/outwear7r.png" ></a>
+
+<a href=" https://www.instagram.com/podarkinaanna/"><img src="https://podarkina96.ru/published/publicdata/WEBASYST/attachments/SC/images/Insta2.png" ></a>
+
+
+Для лого
+background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+background-image: url(https://podarkina96.ru/published/publicdata/WEBASYST/attachments/SC/images/outwear7r.png);
