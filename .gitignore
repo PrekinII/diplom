@@ -24,4 +24,5 @@ yarn-error.log*
 # Docker
 /postgres_data/
 staticfiles/
-media/
+packages.tar.gz
+/pip_packages
