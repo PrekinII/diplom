@@ -1,7 +1,7 @@
 FROM python:3.9.13
 
-# Устанавливаем DNS внутри контейнера
-RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
+# # Устанавливаем DNS внутри контейнера
+# RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 # Обновляем пакеты и устанавливаем системные зависимости
 RUN apt-get update && apt-get install -y \
