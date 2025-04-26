@@ -1,9 +1,9 @@
 FROM python:3.9-slim-bookworm
 
 # 1. Настройка надежных зеркал Debian
-RUN echo "deb https://ftp.debian.org/debian bookworm main" > /etc/apt/sources.list && \
-    echo "deb https://ftp.debian.org/debian bookworm-updates main" >> /etc/apt/sources.list && \
-    echo "deb https://security.debian.org/debian-security bookworm-security main" >> /etc/apt/sources.list
+RUN echo "deb https://mirror.yandex.ru/debian bookworm main" > /etc/apt/sources.list && \
+    echo "deb https://mirror.yandex.ru/debian bookworm-updates main" >> /etc/apt/sources.list && \
+    echo "deb https://mirror.yandex.ru/debian-security bookworm-security main" >> /etc/apt/sources.list
 
 # 2. Установка зависимостей с повторами при ошибках
 RUN apt-get update -o Acquire::Retries=5 || apt-get update -o Acquire::Retries=5 && \
