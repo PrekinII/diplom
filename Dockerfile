@@ -2,10 +2,16 @@ FROM python:3.9-slim-bookworm
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Установка системных зависимостей для PostgreSQL
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends libpq-dev gcc && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# Используем более быстрые зеркала PyPI
+COPY requirements.txt .
+RUN pip install --upgrade pip --index-url https://pypi.tuna.tsinghua.edu.cn/simple/ && \
+    pip install -r requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple/ --trusted-host pypi.tuna.tsinghua.edu.cn
 
 COPY . .
 
