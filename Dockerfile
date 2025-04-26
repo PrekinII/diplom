@@ -1,10 +1,11 @@
 FROM python:3.9
 
 # Обновляем пакеты и устанавливаем зависимости
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libpq-dev \
+RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list \
+    && apt-get update && apt-get install -y \
     gcc \
+    libpq-dev \
+    build-essential \
     curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
