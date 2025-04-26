@@ -10,6 +10,6 @@ RUN pip install --no-index --find-links file:///tmp/pip_packages -r requirements
 WORKDIR /app
 
 # 3. Копируем приложение
-COPY . .
+COPY mycloud/manage.py ./manage.py
 
 CMD ["gunicorn", "mycloud.wsgi:application", "--bind", "0.0.0.0:8000"]
