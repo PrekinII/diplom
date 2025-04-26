@@ -1,17 +1,27 @@
 FROM python:3.9-slim-bookworm
 
+# 1. Настройка надежных зеркал Debian
+RUN echo "deb http://ftp.debian.org/debian bookworm main" > /etc/apt/sources.list && \
+    echo "deb http://ftp.debian.org/debian bookworm-updates main" >> /etc/apt/sources.list && \
+    echo "deb http://security.debian.org/debian-security bookworm-security main" >> /etc/apt/sources.list
+
+# 2. Установка зависимостей с повторами при ошибках
+RUN apt-get update -o Acquire::Retries=5 || apt-get update -o Acquire::Retries=5 && \
+    apt-get install -y --no-install-recommends \
+    libpq-dev \
+    gcc \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
-# Установка системных зависимостей для PostgreSQL
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends libpq-dev gcc && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Используем более быстрые зеркала PyPI
+# 3. Настройка альтернативных PyPI-зеркал
+COPY pip.conf /etc/pip.conf
 COPY requirements.txt .
-RUN pip install --upgrade pip --index-url https://pypi.tuna.tsinghua.edu.cn/simple/ && \
-    pip install -r requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple/ --trusted-host pypi.tuna.tsinghua.edu.cn
+
+# 4. Установка Python-зависимостей
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
 COPY . .
 
