@@ -12,7 +12,8 @@ services:
 
   backend:
     build:
-      context: ./mycloud
+      context: .
+      dockerfile: Dockerfile
     command: >
       sh -c "python manage.py migrate &&
              python manage.py collectstatic --noinput &&
