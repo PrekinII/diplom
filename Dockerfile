@@ -1,16 +1,11 @@
-FROM python:3.9-slim
+FROM python:3.9-alpine
 
-RUN pip config set global.index-url https://mirror.baidu.com/pypi/simple/ && \
-    pip config set global.trusted-host mirror.baidu.com && \
-    pip config set global.timeout 300 && \
-    pip config set install.retries 10
+RUN apk add --no-cache postgresql-libs
 
 WORKDIR /app
-
 COPY requirements.txt .
 
-RUN python -m pip install --upgrade pip && \
-    pip install --no-cache-dir --progress-bar on -r requirements.txt
+RUN pip install --index-url https://pypi.tuna.tsinghua.edu.cn/simple/ -r requirements.txt
 
 COPY . .
 
