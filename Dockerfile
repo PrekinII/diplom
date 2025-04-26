@@ -7,6 +7,8 @@ COPY requirements.txt .
 # 2. Устанавливаем зависимости без интернета
 RUN pip install --no-index --find-links file:///tmp/pip_packages -r requirements.txt
 
+WORKDIR /app
+
 # 3. Копируем приложение
 COPY . .
 
