@@ -1,30 +1,31 @@
-FROM python:3.9-slim-bookworm
+FROM python:3.9
 
-# 1. Настройка надежных зеркал Debian
-RUN echo "deb https://mirror.yandex.ru/debian bookworm main" > /etc/apt/sources.list && \
-    echo "deb https://mirror.yandex.ru/debian bookworm-updates main" >> /etc/apt/sources.list && \
-    echo "deb https://mirror.yandex.ru/debian-security bookworm-security main" >> /etc/apt/sources.list
-
-# 2. Установка зависимостей с повторами при ошибках
-RUN apt-get update -o Acquire::Retries=5 || apt-get update -o Acquire::Retries=5 && \
+# Перезаписываем зеркала Debian на HTTPS
+RUN echo "deb https://deb.debian.org/debian bookworm main" > /etc/apt/sources.list && \
+    echo "deb https://deb.debian.org/debian bookworm-updates main" >> /etc/apt/sources.list && \
+    echo "deb https://security.debian.org/debian-security bookworm-security main" >> /etc/apt/sources.list && \
+    apt-get update && \
     apt-get install -y --no-install-recommends \
-    libpq-dev \
     gcc \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    libpq-dev \
+    build-essential \
+    curl \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# 3. Настройка альтернативных PyPI-зеркал
-COPY pip.conf /etc/pip.conf
+# Копируем зависимости
 COPY requirements.txt .
 
-# 4. Установка Python-зависимостей
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# Устанавливаем Python-зависимости
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Копируем код проекта
 COPY . .
 
+# Создаём папку для медиафайлов
 RUN mkdir -p /app/media
 
+# Команда запуска
 CMD ["gunicorn", "mycloud.wsgi:application", "--bind", "0.0.0.0:8000"]
