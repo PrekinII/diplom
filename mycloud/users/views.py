@@ -13,7 +13,7 @@ def home_view(request):
     return HttpResponse("""
         <h1>Добро пожаловать в MyCloud</h1>
         <p><a href="/admin/">Админка</a></p>
-        <p><a href="http://localhost:3000">Фронтенд</a></p>
+        <p><a href="http://{host}:3000">Фронтенд</a></p>
     """)
 
 # Регистрация
