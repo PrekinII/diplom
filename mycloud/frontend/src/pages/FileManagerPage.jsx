@@ -154,6 +154,22 @@ function FileManagerPage() {
   };
 
   // Генерация публичной ссылки
+//   const generatePublicLink = async (id) => {
+//     try {
+//       const res = await axios.post(
+//         `${API_BASE_URL}/api/storage/${id}/generate_link/`,
+//         {},
+//         { withCredentials: true }
+//       );
+//       const publicUrl = `${API_BASE_URL}/api/storage/public/${res.data.public_link}/`;
+//       await navigator.clipboard.writeText(publicUrl);
+//       alert(`Публичная ссылка скопирована:\n${publicUrl}\n\nЕё можно отправить другим пользователям.`);
+//     } catch (error) {
+//       console.error('Link generation error:', error);
+//       setError('Ошибка генерации ссылки');
+//     }
+//   };
+
   const generatePublicLink = async (id) => {
     try {
       const res = await axios.post(
@@ -162,13 +178,20 @@ function FileManagerPage() {
         { withCredentials: true }
       );
       const publicUrl = `${API_BASE_URL}/api/storage/public/${res.data.public_link}/`;
-      await navigator.clipboard.writeText(publicUrl);
-      alert(`Публичная ссылка скопирована:\n${publicUrl}\n\nЕё можно отправить другим пользователям.`);
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(publicUrl);
+        alert(`Публичная ссылка скопирована:\n${publicUrl}\n\nЕё можно отправить другим пользователям.`);
+      } else {
+        window.prompt("Скопируйте ссылку вручную:", publicUrl);
+      }
     } catch (error) {
       console.error('Link generation error:', error);
       setError('Ошибка генерации ссылки');
+      alert('Ошибка генерации ссылки');
     }
   };
+
   // Функция получения данных пользователя
   const fetchUser = async () => {
     try {
