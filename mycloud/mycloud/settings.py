@@ -98,7 +98,7 @@ USE_TZ = True
 # Static files
 STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR.parent / 'staticfiles'
 
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
