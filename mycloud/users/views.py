@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from rest_framework.permissions import AllowAny
 
 def home_view(request):
+    host = request.get_host().split(':')[0]
     return HttpResponse(f"""
             <h1>Добро пожаловать в MyCloud</h1>
             <p><a href="/admin/">Админка</a></p>
