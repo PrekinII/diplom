@@ -7,9 +7,14 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.http import JsonResponse
 from users.views import home_view
 
+# @ensure_csrf_cookie
+# def get_csrf_token(request):
+#     return JsonResponse({'csrfToken': request.META.get('CSRF_COOKIE')})
+
 @ensure_csrf_cookie
 def get_csrf_token(request):
-    return JsonResponse({'csrfToken': request.META.get('CSRF_COOKIE')})
+    token = csrf.get_token(request)  # возвращает актуальный CSRF-токен
+    return JsonResponse({'csrfToken': token})
 
 urlpatterns = [
     path('', home_view, name='home'),
