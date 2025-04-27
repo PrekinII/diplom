@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
+const API_BASE_URL = process.env.API_BASE_URL;
+
 function RegisterPage() {
   const [form, setForm] = useState({
     username: '',
@@ -20,7 +22,7 @@ function RegisterPage() {
 
   const getCsrfToken = async () => {
     try {
-      const response = await axios.get('/api/csrf/', {
+      const response = await axios.get(`${API_BASE_URL}/api/csrf/`, {
         withCredentials: true
       });
       axios.defaults.headers.common['X-CSRFToken'] = response.data.csrfToken;
@@ -50,7 +52,7 @@ function RegisterPage() {
 
       await getCsrfToken();
 
-      const response = await axios.post('/api/users/register/', form, {
+      const response = await axios.post(`${API_BASE_URL}/api/users/register/`, form, {
         withCredentials: true,
         headers: {
           'Content-Type': 'application/json',

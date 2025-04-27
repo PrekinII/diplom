@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const API_BASE_URL = process.env.API_BASE_URL
+
 function AdminPanel() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('/api/users/all/');
+      const res = await axios.get(`${API_BASE_URL}/api/users/all/`);
       setUsers(res.data);
     } catch (error) {
       alert("Ошибка доступа или загрузки");
@@ -15,7 +17,7 @@ function AdminPanel() {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`/api/users/${id}/delete/`);
+      await axios.delete(`${API_BASE_URL}/api/users/${id}/delete/`);
       fetchUsers();
     } catch {
       alert("Ошибка удаления пользователя");

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
+const API_BASE_URL = process.env.API_BASE_URL;
+
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -12,13 +14,13 @@ function LoginPage() {
     setIsLoading(true);
     try {
       // Получение CSRF-токена
-      const csrfResponse = await axios.get('/api/csrf/', {
+      const csrfResponse = await axios.get(`${API_BASE_URL}/api/csrf/`, {
         withCredentials: true
       });
       axios.defaults.headers.common['X-CSRFToken'] = csrfResponse.data.csrfToken;
 
       // Авторизация
-      const response = await axios.post('/api/users/login/',
+      const response = await axios.post(`${API_BASE_URL}/api/users/login/`,
         { username, password },
         {
           withCredentials: true,

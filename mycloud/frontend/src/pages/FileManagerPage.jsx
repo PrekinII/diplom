@@ -21,10 +21,11 @@ function FileManagerPage() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+
   // Получение CSRF-токена
   const getCsrfToken = async () => {
     try {
-      const response = await axios.get('/api/csrf/', {
+      const response = await axios.get(`${API_BASE_URL}/api/csrf/`, {
         withCredentials: true
       });
       axios.defaults.headers.common['X-CSRFToken'] = response.data.csrfToken;
@@ -38,7 +39,7 @@ function FileManagerPage() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await axios.get('/api/storage/', {
+      const res = await axios.get(`${API_BASE_URL}/api/storage/`, {
         withCredentials: true
       });
       setFiles(res.data);
@@ -68,7 +69,7 @@ function FileManagerPage() {
     formData.append('comment', comment);
 
     try {
-      await axios.post('/api/storage/upload/', formData, {
+      await axios.post(`${API_BASE_URL}/api/storage/upload/`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -91,7 +92,7 @@ function FileManagerPage() {
 
     setIsLoading(true);
     try {
-      await axios.delete(`/api/storage/${id}/delete/`, {
+      await axios.delete(`${API_BASE_URL}/api/storage/${id}/delete/`, {
         withCredentials: true
       });
       await fetchFiles();
@@ -109,7 +110,7 @@ function FileManagerPage() {
     setIsLoading(true);
     try {
       await axios.patch(
-        `/api/storage/${id}/edit/`,
+        `${API_BASE_URL}/api/storage/${id}/edit/`,
         { original_name: newName },
         { withCredentials: true }
       );
@@ -130,7 +131,7 @@ function FileManagerPage() {
     setIsLoading(true);
     try {
       await axios.patch(
-        `/api/storage/${id}/edit/`,
+        `${API_BASE_URL}/api/storage/${id}/edit/`,
         { comment: newComment },
         { withCredentials: true }
       );
@@ -171,7 +172,7 @@ function FileManagerPage() {
   // Функция получения данных пользователя
   const fetchUser = async () => {
     try {
-      const res = await axios.get('/api/users/me/', {
+      const res = await axios.get(`${API_BASE_URL}/api/users/me/`, {
         withCredentials: true
       });
       setUser(res.data);
@@ -183,7 +184,7 @@ function FileManagerPage() {
   // Функция выхода
   const handleLogout = async () => {
     try {
-      await axios.post('/api/users/logout/', {}, {
+      await axios.post(`${API_BASE_URL}/api/users/logout/`, {}, {
         withCredentials: true
       });
       navigate('/login');
