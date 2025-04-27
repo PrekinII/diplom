@@ -46,10 +46,9 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - static_volume:/static  # Подключаем volume со статикой
+      - ./staticfiles:/static
     depends_on:
       - backend
 
 volumes:
   postgres_data:
-  static_volume:
