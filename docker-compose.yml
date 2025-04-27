@@ -10,29 +10,13 @@ services:
     ports:
       - "5432:5432"
 
-#  backend:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    command: >
-#      sh -c "python manage.py migrate &&
-#             python manage.py collectstatic --noinput &&
-#             gunicorn mycloud.wsgi:application --bind 0.0.0.0:8000"
-#    volumes:
-#      - ./mycloud/media:/app/media
-#    ports:
-#      - "8000:8000"
-#    depends_on:
-#      - db
-#    env_file:
-#      - .env
-
   backend:
     build:
       context: .
       dockerfile: Dockerfile
     command: >
-      sh -c "python mycloud/manage.py migrate &&
+      sh -c "sleep 5 &&
+             python mycloud/manage.py migrate &&
              python mycloud/manage.py collectstatic --noinput &&
              gunicorn mycloud.wsgi:application --bind 0.0.0.0:8000"
     volumes:
