@@ -32,15 +32,25 @@ services:
       - DJANGO_SETTINGS_MODULE=mycloud.settings
 
 
+#  frontend:
+#    build:
+#      context: ./mycloud/frontend
+#    ports:
+#      - "3000:80"
+#    depends_on:
+#      - backend
+#    env_file:
+#      - .env
   frontend:
     build:
       context: ./mycloud/frontend
+    environment: # Явно прописываем переменные для сборки
+      - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
     ports:
       - "3000:80"
     depends_on:
       - backend
-    env_file:
-      - .env
+
 
   nginx:
     image: nginx:alpine
