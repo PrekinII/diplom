@@ -44,8 +44,8 @@ services:
   frontend:
     build:
       context: ./mycloud/frontend
-    environment: # Явно прописываем переменные для сборки
-      - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
+      args:
+        - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
     ports:
       - "3000:80"
     depends_on:
