@@ -18,7 +18,7 @@ FROM node:22.12.0 as build
 WORKDIR /app
 
 # Копируем .env в контейнер
-COPY .env ./
+COPY ../.env ./
 
 # Копируем package.json и устанавливаем зависимости
 COPY package*.json ./
