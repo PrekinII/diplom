@@ -41,15 +41,24 @@ services:
 #      - backend
 #    env_file:
 #      - .env
+
+#  frontend:
+#    build:
+#      context: ./mycloud/frontend
+#      args:
+#        - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
+#    ports:
+#      - "3000:80"
+#    depends_on:
+#      - backend
+
   frontend:
     build:
       context: ./mycloud/frontend
-      args:
-        - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
-    ports:
-      - "3000:80"
+      dockerfile: Dockerfile
     depends_on:
       - backend
+    restart: always
 
 
   nginx:
@@ -59,8 +68,10 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./staticfiles:/staticfiles
+      - ./mycloud/media:/app/media
     depends_on:
       - backend
+      - frontend
 
 volumes:
   postgres_data:
