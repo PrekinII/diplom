@@ -7,9 +7,10 @@ FROM node:22.12.0 as build
 
 WORKDIR /app
 COPY package*.json ./
+COPY .env .env
 RUN npm install
 COPY . .
-COPY .env .env
+
 RUN npm run build
 
 FROM nginx:alpine
