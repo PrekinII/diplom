@@ -10,7 +10,8 @@ yarn-debug.log*
 yarn-error.log*
 /.pnp
 .pnp.js
-/build
+
+git a
 /dist
 /.next
 /.cache

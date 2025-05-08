@@ -20,6 +20,7 @@ services:
              python mycloud/manage.py collectstatic --noinput &&
              gunicorn mycloud.wsgi:application --bind 0.0.0.0:8000"
     volumes:
+      - ./mycloud:/app
       - ./mycloud/media:/app/media
       - ./staticfiles:/app/staticfiles
     ports:
@@ -31,26 +32,6 @@ services:
     environment:
       - DJANGO_SETTINGS_MODULE=mycloud.settings
 
-
-#  frontend:
-#    build:
-#      context: ./mycloud/frontend
-#    ports:
-#      - "3000:80"
-#    depends_on:
-#      - backend
-#    env_file:
-#      - .env
-
-#  frontend:
-#    build:
-#      context: ./mycloud/frontend
-#      args:
-#        - REACT_APP_API_BASE_URL=http://95.163.223.166:8000
-#    ports:
-#      - "3000:80"
-#    depends_on:
-#      - backend
 
   frontend:
     build:
