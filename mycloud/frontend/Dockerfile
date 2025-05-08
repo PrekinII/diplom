@@ -3,12 +3,13 @@ FROM node:22.12.0 as build
 # Принимаем аргумент
 # ARG REACT_APP_API_BASE_URL
 # ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
-COPY .env .env
+
 
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+COPY .env .env
 RUN npm run build
 
 FROM nginx:alpine
