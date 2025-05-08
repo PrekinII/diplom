@@ -37,12 +37,12 @@ services:
     build:
       context: ./mycloud/frontend
       dockerfile: Dockerfile
-    volumes:
-      - frontend_build:/app/build
+#    volumes:
+#      - frontend_build:/app/build
     depends_on:
       - backend
-    environment:
-      - REACT_APP_API_BASE_URL=http://95.163.223.166/api  
+#    environment:
+#      - REACT_APP_API_BASE_URL=http://95.163.223.166/api
     restart: always
 
 
