@@ -1,5 +1,5 @@
-FROM node:22.12.0 as build
-
+# FROM node:22.12.0 as build
+FROM node:18.20.2 as build
 # Принимаем аргумент
 # ARG REACT_APP_API_BASE_URL
 # ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
