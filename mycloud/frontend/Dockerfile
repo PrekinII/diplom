@@ -6,15 +6,16 @@ FROM node:18.20.2 as build
 
 
 WORKDIR /app
-COPY . .
-# COPY package*.json ./
-# COPY .env .env
+# COPY . .
+COPY mycloud/frontend/package*.json ./
+COPY mycloud/frontend/.env .env
 RUN npm install
+COPY mycloud/frontend/ ./
 RUN npm run build
 
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
-COPY ../../nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ../../nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
