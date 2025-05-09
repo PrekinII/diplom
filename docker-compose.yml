@@ -35,8 +35,8 @@ services:
 
   frontend:
     build:
-      context: ./mycloud/frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: mycloud/frontend/Dockerfile
     ports:
       - "80:80"
 #    volumes:
