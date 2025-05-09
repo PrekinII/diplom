@@ -7,8 +7,9 @@ FROM node:22.12.0 as build
 
 WORKDIR /app
 COPY package*.json ./
-COPY .env .env
 RUN npm install
+
+# COPY .env .env
 COPY . .
 
 RUN npm run build
