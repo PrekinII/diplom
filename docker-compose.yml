@@ -35,13 +35,13 @@ services:
 
   frontend:
     build:
-      context: .
-      dockerfile: mycloud/frontend/Dockerfile
+      context: ./mycloud/frontend
+      dockerfile: Dockerfile
     ports:
       - "80:80"
-#    volumes:
-#      - ./staticfiles:/staticfiles
-#      - ./mycloud/media:/app/media
+    volumes:
+      - ./staticfiles:/staticfiles
+      - ./mycloud/media:/app/media
 #      - frontend_build:/app/build
     depends_on:
       - backend
