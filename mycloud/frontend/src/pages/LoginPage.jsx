@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
-// const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-const API_BASE_URL = "http://95.163.223.166/api";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+// const API_BASE_URL = "http://95.163.223.166/api";
 console.log("API_BASE_URL:", API_BASE_URL);
 
 function LoginPage() {
